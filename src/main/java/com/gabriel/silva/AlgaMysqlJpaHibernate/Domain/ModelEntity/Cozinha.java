@@ -1,18 +1,16 @@
 package com.gabriel.silva.AlgaMysqlJpaHibernate.Domain.ModelEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tab_cozinhas")
+@Table(name = "cozinhas")
 public class Cozinha {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "nom_cozinha")
+    @Column(name = "cozinha")
     private String nome;
 
     public Long getId() {
